@@ -15,7 +15,7 @@ public:
 	}
 };
 
-class wektor2D
+class Wektor2D
 {
 public:
 	double x;
@@ -24,17 +24,17 @@ public:
 	{
 		return sqrt(x * x + y * y);
 	}
-	wektor2D() : x(0.0), y(0.0)
+	Wektor2D() : x(0.0), y(0.0)
 	{
 	}
 
-	wektor2D(int wsporzednax, int wsporzednay)		// zadanie 2
+	Wektor2D(int wsporzednax, int wsporzednay)		// zadanie 2
 	{
 		x = wsporzednax;
 		y = wsporzednay;
 		std::cout << "Hello, oto wspolrzedne " << x << "!\n" << y;
 	}
-	~wektor2D()
+	~Wektor2D()
 	{
 		std::cout << "Goodbye, " << x << "...\n" << y;
 	}
@@ -44,12 +44,12 @@ private:
 	double getx() { return x; }
 	double gety() { return y; }
 
-	wektor2D operator+(const wektor2D& other) //zadanie 5
+	Wektor2D operator+(const wektor2D& other) //zadanie 5
 	const 
 	{
 		return wektor2D(x + other.x, y + other.y);
 	}	
-	wektor2D operator*(const wektor2D& other) //zadanie 5
+	Wektor2D operator*(const wektor2D& other) //zadanie 5
 		const
 	{
 		return wektor2D(x*other.x, y*other.y);
