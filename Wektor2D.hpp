@@ -24,6 +24,10 @@ public:
 	{
 		return sqrt(x * x + y * y);
 	}
+	wektor2D() : x(0.0), y(0.0)
+	{
+		cout<<"";
+	}
 
 	wektor2D(int wsporzednax, int wsporzednay)		// zadanie 2
 	{
