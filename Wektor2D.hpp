@@ -39,8 +39,8 @@ public:
 		std::cout << "Goodbye, " << x << "...\n" << y;
 	}
 
-	double setX(int x1) { x = x1; return 0; }			// zaddanie 4
-	double setY(int y1) { x = y1; return 0; }
+	double setX(double x1) { x = x1; return 0; }			// zaddanie 4
+	double setY(double y1) { x = y1; return 0; }
 	double getX() { return x; }
 	double getY() { return y; }
 
