@@ -1,58 +1,25 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-class informer
-{
-public:
-	informer()
-	{
-		std::cout << "konstrukcja informera ...\n";		//zadanie 3
-	}
-	~informer()
-	{
-		std::cout << "destrukcja informera ...\n";
-
-	}
-};
-
 class Wektor2D
 {
 public:
-	double x;
-	double y;
-	double dlugosc()
-	{
-		return sqrt(x * x + y * y);
-	}
-	Wektor2D() : x(0.0), y(0.0)
-	{
-	}
+    double x;
+    double y;
 
-	Wektor2D(int wsporzednax, int wsporzednay)		// zadanie 2
-	{
-		x = wsporzednax;
-		y = wsporzednay;
-		std::cout << "Hello, oto wspolrzedne " << x << "!\n" << y;
-	}
-	~Wektor2D()
-	{
-		std::cout << "Goodbye, " << x << "...\n" << y;
-	}
+    Wektor2D(): x(0.0), y(0.0) {} //konstruktor domyslny
+    Wektor2D(double x_val, double y_val) : x(x_val), y(y_val) {} // konstruktor dwuparametrowy
 
-	double setX(double x1) { x = x1; return 0; }			// zaddanie 4
-	double setY(double y1) { x = y1; return 0; }
-	double getX() { return x; }
-	double getY() { return y; }
+    void setX(double x_val) {x=x_val;} // settery
+    void setY(double y_val) {y=y_val;}
 
-	Wektor2D operator+(const Wektor2D& other) //zadanie 5
-	const 
-	{
-		return Wektor2D(x + other.x, y + other.y);
-	}	
-	Wektor2D operator*(const Wektor2D& other) //zadanie 5
-		const
-	{
-		return Wektor2D(x*other.x, y*other.y);
-	}
+    double getX() const {return x;}	//gettery
+    double getY() const {return y;}
+    
+    Wektor2D operator+(const Wektor2D& vec) const {
+        return Wektor2D(x + vec.x, y + vec.y);
+    }
 
+    double operator*(const Wektor2D& vec) const {
+        return x * vec.x + y * vec.y;
+    }
 };
