@@ -44,15 +44,15 @@ private:
 	double getx() { return x; }
 	double gety() { return y; }
 
-	Wektor2D operator+(const wektor2D& other) //zadanie 5
+	Wektor2D operator+(const Wektor2D& other) //zadanie 5
 	const 
 	{
-		return wektor2D(x + other.x, y + other.y);
+		return Wektor2D(x + other.x, y + other.y);
 	}	
-	Wektor2D operator*(const wektor2D& other) //zadanie 5
+	Wektor2D operator*(const Wektor2D& other) //zadanie 5
 		const
 	{
-		return wektor2D(x*other.x, y*other.y);
+		return Wektor2D(x*other.x, y*other.y);
 	}
 
 };
